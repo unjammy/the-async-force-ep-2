@@ -25,12 +25,20 @@ var clicky = function(){
 
     console.log(response);
 
+    var container = document.getElementById('contentContainer');
+
+    while( container.hasChildNodes() ){
+
+      container.removeChild(container.childNodes[0]);
+
+    }
+
     switch(category){
 
       case 'people':
         var name = document.createElement('h2');
         name.innerHTML = response.name;
-        document.getElementById('contentContainer').appendChild(name);
+        container.appendChild(name);
         var gender;
         var species;
 
@@ -38,6 +46,8 @@ var clicky = function(){
 
       case 'planets':
         var name = document.createElement('h2');
+        name.innerHTML = response.name;
+        container.appendChild(name);
         var terrain;
         var population;
         var filmList;
@@ -46,6 +56,8 @@ var clicky = function(){
 
       case 'starships':
         var name = document.createElement('h2');
+        name.innerHTML = response.name;
+        container.appendChild(name);
         var manufacturer;
         var shipClass;
         var filmList;
@@ -55,7 +67,7 @@ var clicky = function(){
       default:
         var errorMessage = document.createElement('h1');
         errorMessage.innerHTML = "ERROR";
-        document.getElementById('contentContainer').appendChild(errorMessage);
+        container.appendChild(errorMessage);
         break;
     }
 
