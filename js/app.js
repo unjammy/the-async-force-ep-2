@@ -39,7 +39,9 @@ var clicky = function(){
         var name = document.createElement('h2');
         name.innerHTML = response.name;
         container.appendChild(name);
-        var gender;
+        var gender = document.createElement('p');
+        gender.innerHTML = response.gender;
+        container.appendChild(gender);
         var species;
 
         break;
@@ -48,8 +50,12 @@ var clicky = function(){
         var name = document.createElement('h2');
         name.innerHTML = response.name;
         container.appendChild(name);
-        var terrain;
-        var population;
+        var terrain = document.createElement('p');
+        terrain.innerHTML = response.terrain;
+        container.appendChild(terrain);
+        var population = document.createElement('p');
+        population.innerHTML = response.population;
+        container.appendChild(population);
         var filmList;
 
         break;
@@ -58,8 +64,12 @@ var clicky = function(){
         var name = document.createElement('h2');
         name.innerHTML = response.name;
         container.appendChild(name);
-        var manufacturer;
-        var shipClass;
+        var manufacturer = document.createElement('p');
+        manufacturer.innerHTML = response.manufacturer;
+        container.appendChild(manufacturer);
+        var shipClass = document.createElement('p');
+        shipClass.innerHTML = response.starship_class;
+        container.appendChild(shipClass);
         var filmList;
 
         break;
